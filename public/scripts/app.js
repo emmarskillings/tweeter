@@ -74,6 +74,10 @@ $(document).ready(function() {
 
   })
 
+  $(".container .button").on("click", function() {
+    $(".counter").text(140);
+  })
+
 
   $("form").on( "submit", function(data) {
 
@@ -93,8 +97,6 @@ $(document).ready(function() {
         success: function(data) {
           $('#tweets-container').prepend(createTweetElement(data));
           $('textarea').val('');
-          $('.counter').val(140);
-          console.log(".counter");
         }
       });
     }
