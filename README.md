@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+The layout includes a Compose button that allows the user to toggle between showing and hiding the Compose Tweet section of the page. If a tweet is invalid, namely if there is no content in the text area or there are more than 140 characters, an appropriate error message will be displayed. When a valid tweet is posted it appears directly below the Compose Tweet section! Happy Tweetering!
 
 ## Getting Started
 
@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot of tweeter with footer icons highlighed"](https://github.com/emmarskillings/tweeter/blob/master/docs/tweeter.png)
+!["Screenshot of tweeter with Tweet button highlighed and error message showing"](https://github.com/emmarskillings/tweeter/blob/master/docs/new_tweet.png)
+!["Screenshot of tweeter with Compose button highlighed and Compose Tweet section hidden"](https://github.com/emmarskillings/tweeter/blob/master/docs/compose.png)
