@@ -67,36 +67,37 @@ $(document).ready(function() {
 
   loadTweets();
 
-  $(".right").on('click', function() {
+  function resetCounter(form) {
+    $(form).find("textarea").val('');
+    $(form).find(".counter").text(140);
+    console.log(form);
+  }
 
+  $(".right").on('click', function() {
     $(".new-tweet").slideToggle();
     $("textarea").focus();
-
-  })
-
-  $(".container .button").on("click", function() {
-    $(".counter").text(140);
-  })
+    $(".alert").text("");
+  });
 
 
-  $("form").on( "submit", function(data) {
+  $("form").on( "submit", function(event) {
 
     event.preventDefault();
 
+    $(".alert").text("")
+
     if ($('textarea').val().length === 0) {
-      $(".alert").append(`Hey! You gotta type something before you can tweet it ${frown}`).fadeOut(7000);
-      $(".alert").val('').delay(7000);
+      $(".alert").append(`Hey! You gotta type something before you can tweet it ${frown}`);
     } else if ($('textarea').val().length > 140) {
-      $(".alert").append(`Uh oh... looks like you've got too much to say ${cringe}`).fadeOut(7000)
-      $(".alert").val('').delay(7000);
+      $(".alert").append(`Uh oh... looks like you've got too much to say ${cringe}`);
     } else {
       $.ajax ({
         type: 'POST',
         url: '/tweets',
         data: $(this).serialize(),
-        success: function(data) {
-          $('#tweets-container').prepend(createTweetElement(data));
-          $('textarea').val('');
+        success: function(tweets) {
+          $('#tweets-container').prepend(createTweetElement(tweets));
+          resetCounter(event.target);
         }
       });
     }
