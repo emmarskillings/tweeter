@@ -27,34 +27,10 @@ body {
 .container {
   width: 450px;
   background-color: #ffffff;
-  margin-left: 415px;
-  margin-right: 415px;
+  margin: auto;
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.container .alert {
-  height: 20px;
-  text-align: right;
-  margin-right: 2em;
-  color: red;
-  animation-name: disappear;
-  animation-duration: 2s;
-}
-
-@keyframes disappear {
-  from {visibility: visible;}
-  to {visibility: hidden;}
-}
-
-
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

@@ -1,3 +1,7 @@
+/*
+ * Posted tweets layout
+ */
+
 .tweets {
   background-color: #ffffff;
   border: 1px solid #A9A9A9;
@@ -49,7 +53,7 @@
 
 .tweets footer {
   border-top: 1px solid #eee;
-  font-size: 0.5em;
+  font-size: 10px;
   padding-left: 10px;
   padding-top: 5px;
 
@@ -63,8 +67,7 @@
   color: #00a087;
   visibility: hidden;
   margin-right: 10px;
-  margin-top: 10px;
-
+  margin-top: 12px;
   float: right;
 }
 

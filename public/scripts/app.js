@@ -6,8 +6,12 @@
 
 $(document).ready(function() {
 
+  // Links to icons used for Compose and Tweet buttons
+
   const frown   = `<i class="far fa-frown"></i>`
   const cringe  = `<i class="far fa-meh"></i>`
+
+  // Function that creates an object containing all the information from a tweet when it is posted
 
   function createTweetElement(tweet) {
 
@@ -67,11 +71,14 @@ $(document).ready(function() {
 
   loadTweets();
 
+  // Clears textarea an resets counter to zero when Tweet button is pressed
+
   function resetCounter(form) {
     $(form).find("textarea").val('');
     $(form).find(".counter").text(140);
-    console.log(form);
   }
+
+  // Hides or displays Compose Tweet box when Compose button is pressed
 
   $(".right").on('click', function() {
     $(".new-tweet").slideToggle();
@@ -79,6 +86,7 @@ $(document).ready(function() {
     $(".alert").text("");
   });
 
+  // Posts tweet to page and sends data to MongoDB
 
   $("form").on( "submit", function(event) {
 
@@ -103,5 +111,23 @@ $(document).ready(function() {
     }
   });
 
-
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
