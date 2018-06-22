@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-The layout includes a Compose button that allows the user to toggle between showing and hiding the Compose Tweet section of the page. If a tweet is invalid, namely if there is no content in the text area or there are more than 140 characters, an appropriate error message will be displayed. When a valid tweet is posted it appears directly below the Compose Tweet section! Happy Tweetering!
+The layout includes a Compose button that allows the user to toggle between showing and hiding the Compose Tweet section of the page. If a tweet is invalid, namely if there is no content in the text area or there are more than 140 characters, an appropriate error message will be displayed. When a valid tweet is posted it appears directly below the Compose Tweet section!
 
 ## Getting Started
 
